@@ -7,6 +7,11 @@ import {fetchColorService as mockFetch} from '../services/fetchColorService';
 
 jest.mock("../services/fetchColorService")
 
+const data = [
+    {code: "#f0f8ff", color: "aliceblue", id: 1}
+    {}
+]
+
 test("Renders without errors", async () => {
     mockFetch.mockResolvedValueOnce({ data: [] });
     render(<BubblePage />);

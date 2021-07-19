@@ -23,8 +23,19 @@ const BubblePage = () => {
   };
 
   const saveEdit = (editColor) => {
-    axiosWithAuth().put("/color/:id")
-
+    // axiosWithAuth().put(`http://localhost:5000/api/colors/id`, editColor)
+    // .then(response => {
+    //   this.setEditing({
+    //     putEditColor: response.data,
+    //     putError: ""
+    //   })
+    // })
+    // .catch(err => {
+    //   this.setEditing({
+    //     putEditColor: '',
+    //     putError: err.response.data.Error
+    //   })
+    // })
   };
 
   const deleteColor = (colorToDelete) => {
