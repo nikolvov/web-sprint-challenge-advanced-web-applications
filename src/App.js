@@ -4,7 +4,7 @@ import { BrowserRouter as Router, Route } from "react-router-dom";
 import Login from "./components/Login";
 import "./styles.scss";
 import {PrivateRoute} from'./components/PrivateRoute'
-import ColorList from './components/ColorList'
+import BubblePage from './components/BubblePage'
 
 function App() {
   return (
@@ -16,7 +16,7 @@ function App() {
             logout
           </a>
         </header> 
-        <PrivateRoute path="/colors" component={ColorList} />
+        <PrivateRoute path="/colors" component={BubblePage} />
         <Route exact path="/" component={Login} />
       </div>
     </Router>

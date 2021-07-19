@@ -3,7 +3,10 @@ import { axiosWithAuth } from '../helpers/axiosWithAuth'
 import { useHistory } from 'react-router-dom'
 
 const Login = () => {
+  const initialValues = {username: 'Lambda', password: 'School'}
   const [form, setForm] = useState({username: '', password: ''});
+  // const [formValues, setFormValues] = useState(initialValues)
+  // const [error, setError] = useState()
   const {push} = useHistory()
   // make a post request to retrieve a token from the api
   // when you have handled the token, navigate to the BubblePage route
@@ -24,9 +27,12 @@ const Login = () => {
         push('/colors')
       })
       .catch(err => console.log(err));
+    // if(username !== 'Lambda' || password !== 'School'){
+    //   setError('Username or Password incorrect.')
+    // }
   }
 
-  const error = "";
+  const error = "Username or Password incorrect.";
   //replace with error state
 
   return (

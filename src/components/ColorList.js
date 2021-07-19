@@ -1,5 +1,4 @@
-import React, { useEffect, useState } from "react";
-import { fetchColorService } from '../services/fetchColorService'
+import React, { useState } from "react";
 
 import Color from './Color';
 import EditMenu from './EditMenu';
@@ -7,14 +6,6 @@ import EditMenu from './EditMenu';
 const ColorList = (props) => {
   const { colors, editing, toggleEdit, saveEdit, deleteColor } = props;
   const [ editColor, setEditColor] = useState({ color: "", code: { hex: "" }});
-
-  useEffect(() => {
-    fetchColorService()
-      .then(res => {
-        console.log(res)
-      })
-      .catch(err => console.log(err))
-  }, [])
 
   return (
     <div className="colors-wrap">
